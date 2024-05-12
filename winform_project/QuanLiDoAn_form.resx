@@ -135,19 +135,20 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txt_giatien.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMQAAAAZCAYAAABuBoGaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB6SURBVHhe7dOxDcQwEAPB678qCSrDZbiANw5WQH8LmgGY
-        MN8C/qy1rjHGz+zUdQM7h6o+4GTdwM5BECAICIKAIAgIgoAgCAiCgCAICIKAIAgIgoAgCAiCgCAICIKA
-        IAgIgoAgCAiCgCAICJ8g5px3H2anrhvYOQCvqgf7GDiHr2W8RQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAMQAAAAoCAYAAAChIFWSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACdSURBVHhe7dOxDQIxAARB91/Vv1wGZVAALwsHCy14Rrrk
+        8h3Anznn67quj9mpWw3sHMZYB5xsNbBzEAQIAkIQEIKAEASEICAEASEICEFACAJCEBCCgBAEhCAgBAEh
+        CAhBQAgCQhAQgoAQBIQgIAQBIQgIQUAIAkIQEIKAEASEICAEASEICEFACAJCEBA/Qdz3/V6H2albDewc
+        gK8xHiBGb4yKTnzFAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="txt_tenmon.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAPsAAAAiCAYAAACZQ69BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACfSURBVHhe7dOxCQMxAARB9V+VHpXhMlyAH4ESt6CdgUsu
+        iVBORw0KGgoAAAANSUhEUgAAAPsAAAAoCAYAAAA42IwnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVHhe7dOxCQMxAARB9V+VHpXhMlyAH4ESt6CdgUsu
         3wGErLU+c86fmd233fdJfYx9AHfafZ/UxQ43EztEiB0ixA4RYocIsUOE2CFC7BAhdogQO0SIHSLEDhFi
-        hwixQ4TYIULsECF2iBA7RIgdIsQOEWKHCLFDhNghQuwQIXaIEDtEiB0ixA4RYoeIv9if5/nuw8zu2+77
-        pA7cb4wXK5xuad0j6fUAAAAASUVORK5CYII=
+        hwixQ4TYIULsECF2iBA7RIgdIsQOEWKHCLFDhNghQuwQIXaIEDtEiB0ixA4RYocIsUOE2CFC7BAhdogQ
+        O0SIHSL+Yn+e57sPM7tvu++TOnC/MV7xsqeO4K4U5gAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="bunifuElipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

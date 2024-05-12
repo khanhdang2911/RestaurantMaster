@@ -15,7 +15,8 @@ namespace winform_project
         [Key]
         public int Id { set; get; }
         public string Username { set; get; }
-        public string Address { set; get; }
+        [DisplayName("Họ và tên")]
+        public string HoTen { set; get; }
         public string Phone { set; get; }
         public string Password { set; get; }
         public int RoleId { set; get; }

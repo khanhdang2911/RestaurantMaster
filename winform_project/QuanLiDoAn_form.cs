@@ -51,12 +51,15 @@ namespace winform_project
 
             var currenRow = bunifuDataGridView1.CurrentRow;
 
-            int Id = int.Parse(currenRow.Cells[0].Value.ToString());
-            var sanpham = _context.sanPhams.Where(c => c.Id == Id).FirstOrDefault();
-            txt_tenmon.Text = sanpham.TenSanPham;
-            txt_giatien.Text = sanpham.GiaSanPham.ToString();
-            cbb_danhmuc.SelectedItem = _context.danhMucs.Where(c => c.Id == sanpham.DanhMucId).FirstOrDefault();
-            checkbox_tinhtrang.Checked = sanpham.TinhTrang;
+            if(currenRow!=null)
+            {
+                int Id = int.Parse(currenRow.Cells[0].Value.ToString());
+                var sanpham = _context.sanPhams.Where(c => c.Id == Id).FirstOrDefault();
+                txt_tenmon.Text = sanpham.TenSanPham;
+                txt_giatien.Text = sanpham.GiaSanPham.ToString();
+                cbb_danhmuc.SelectedItem = _context.danhMucs.Where(c => c.Id == sanpham.DanhMucId).FirstOrDefault();
+                checkbox_tinhtrang.Checked = sanpham.TinhTrang;
+            }
 
 
 
@@ -153,13 +156,23 @@ namespace winform_project
             else
             {
                 int Id = int.Parse(currenRow.Cells[0].Value.ToString());
+                //Kiem tra xem co ai order hay khong, neu co thi khong cho xoa
+                if(_context.sanPhamBans.Any(c=>c.SanPhamId==Id))
+                {
+                    MessageBox.Show("Sản phẩm này đang có người order, nếu muốn xóa thì hãy thanh toán xog các bàn có món đó.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 
-                var sanpham = _context.sanPhams.Find(Id);
-                _context.sanPhams.Remove(sanpham);
-                _context.SaveChanges();
-                bunifuDataGridView1.DataSource = null;
-                LoadDataAsync();
-                MessageBox.Show("Xóa thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+                else
+                {
+                    var sanpham = _context.sanPhams.Find(Id);
+                    
+                    _context.sanPhams.Remove(sanpham);
+                    _context.SaveChanges();
+                    bunifuDataGridView1.DataSource = null;
+                    LoadDataAsync();
+                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 

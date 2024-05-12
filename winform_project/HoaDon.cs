@@ -16,7 +16,9 @@ namespace winform_project
         public int Id { set; get; }
         [DisplayName("Ngày bán")]
         public DateTime NgayBan { set; get; }
-        
+        [DisplayName("Tên bàn")]
         public string TenBan { set; get; }
+        [DisplayName("Tổng tiền thanh toán")]
+        public decimal tongTien { set; get; }
     }
 }

@@ -3,13 +3,12 @@ using winform_project;
 
 public static class DependencyContainer
 {
-    private static IContainer _container;
+    public static IContainer _container;
 
     public static void RegisterDependencies()
     {
         var builder = new ContainerBuilder();
 
-        // Đăng ký các dependency ở đây
         builder.RegisterType<AppDbContext>().SingleInstance();
 
         _container = builder.Build();

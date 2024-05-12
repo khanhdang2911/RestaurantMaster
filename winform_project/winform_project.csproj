@@ -39,6 +39,9 @@
     <Reference Include="Autofac, Version=8.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.8.0.0\lib\netstandard2.0\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net48\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.5.0.1\lib\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -150,6 +153,9 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Server.1.0.0\lib\net46\Microsoft.SqlServer.Server.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -187,6 +193,14 @@
     <Compile Include="AppDbContext.cs" />
     <Compile Include="DanhMuc.cs" />
     <Compile Include="DependencyContainer.cs" />
+    <Compile Include="DoiMatKhau_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau_form.Designer.cs">
+      <DependentUpon>DoiMatKhau_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTOs\DanhMucDTO.cs" />
+    <Compile Include="DTOs\NguoiDungDTO.cs" />
     <Compile Include="DTOs\SanPhamDTO.cs" />
     <Compile Include="DTOs\SanPhamOrderDTO.cs" />
     <Compile Include="Form1.cs">
@@ -201,6 +215,7 @@
     <Compile Include="goimon_form.Designer.cs">
       <DependentUpon>goimon_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\HashPassword.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="Login_form.cs">
       <SubType>Form</SubType>
@@ -227,6 +242,18 @@
     <Compile Include="Migrations\202405111017015_AddHoaDon_SanPhamBanphan3.cs" />
     <Compile Include="Migrations\202405111017015_AddHoaDon_SanPhamBanphan3.designer.cs">
       <DependentUpon>202405111017015_AddHoaDon_SanPhamBanphan3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405120322243_updateHoaDon.cs" />
+    <Compile Include="Migrations\202405120322243_updateHoaDon.designer.cs">
+      <DependentUpon>202405120322243_updateHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405120522016_updateRole_User.cs" />
+    <Compile Include="Migrations\202405120522016_updateRole_User.designer.cs">
+      <DependentUpon>202405120522016_updateRole_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405120536561_updateRole_Userp2.cs" />
+    <Compile Include="Migrations\202405120536561_updateRole_Userp2.designer.cs">
+      <DependentUpon>202405120536561_updateRole_Userp2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NguoiDung.cs" />
@@ -260,6 +287,9 @@
     <Compile Include="ThayDoiThongTin_form.Designer.cs">
       <DependentUpon>ThayDoiThongTin_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DoiMatKhau_form.resx">
+      <DependentUpon>DoiMatKhau_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +313,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405111017015_AddHoaDon_SanPhamBanphan3.resx">
       <DependentUpon>202405111017015_AddHoaDon_SanPhamBanphan3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405120322243_updateHoaDon.resx">
+      <DependentUpon>202405120322243_updateHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405120522016_updateRole_User.resx">
+      <DependentUpon>202405120522016_updateRole_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405120536561_updateRole_Userp2.resx">
+      <DependentUpon>202405120536561_updateRole_Userp2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -335,6 +374,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

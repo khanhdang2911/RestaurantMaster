@@ -15,7 +15,6 @@ namespace winform_project
         static void Main()
         {
             DependencyContainer.RegisterDependencies();
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login_form());

@@ -71,35 +71,44 @@ namespace winform_project
                     var currentSanPham = dtg_danhsachmonOrder.CurrentRow.Cells[0].Value.ToString();
                     int IdSP = int.Parse(currentSanPham);
                     var sanpham = _context.sanPhams.Find(IdSP);
-                    if(_context.sanPhamBans.Any(c=>c.SanPhamId== IdSP&&c.BanId==BanID))
+                    //Kiem tra tinh trang neu het hang thi khong cho chon mon
+                    if(sanpham.TinhTrang==false)
                     {
-                        var sanphamBanEdit = _context.sanPhamBans.Where(c => c.SanPhamId == IdSP && c.BanId == BanID).FirstOrDefault();
-                        _context.Entry(sanphamBanEdit).State=System.Data.Entity.EntityState.Modified;
-                        sanphamBanEdit.Soluong= int.Parse(txt_soluong.Text.ToString());
-                        _context.SaveChanges();
-                        MessageBox.Show("Sửa order thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
-                        
-                        
+                        MessageBox.Show("Sản phẩm này đã hết hàng, hãy chọn món khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        SanPhamBan sanPhamBan = new SanPhamBan();
-                        sanPhamBan.Soluong = int.Parse(txt_soluong.Text.ToString());
-                        sanPhamBan.BanId = BanID;
-                        sanPhamBan.SanPhamId = sanpham.Id;
-                        _context.sanPhamBans.Add(sanPhamBan);
-                        _context.SaveChanges();
-                        MessageBox.Show("Order thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    txt_soluong.Text = "";
-                    var ban = _context.bans.Find(BanID);
-                    //Sua lai tinh trang ban
-                    if (ban.TinhTrang == false)
-                    {
-                        _context.Entry(ban).State = System.Data.Entity.EntityState.Modified;
-                        ban.TinhTrang = true;
-                        _context.SaveChanges();
+                        //Neu co roi thi sua
+                        if (_context.sanPhamBans.Any(c => c.SanPhamId == IdSP && c.BanId == BanID))
+                        {
+                            var sanphamBanEdit = _context.sanPhamBans.Where(c => c.SanPhamId == IdSP && c.BanId == BanID).FirstOrDefault();
+                            _context.Entry(sanphamBanEdit).State = System.Data.Entity.EntityState.Modified;
+                            sanphamBanEdit.Soluong = int.Parse(txt_soluong.Text.ToString());
+                            _context.SaveChanges();
+                            MessageBox.Show("Sửa order thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+                        }
+                        else//Chua co thi them
+                        {
+                            SanPhamBan sanPhamBan = new SanPhamBan();
+                            sanPhamBan.Soluong = int.Parse(txt_soluong.Text.ToString());
+                            sanPhamBan.BanId = BanID;
+                            sanPhamBan.SanPhamId = sanpham.Id;
+                            _context.sanPhamBans.Add(sanPhamBan);
+                            _context.SaveChanges();
+                            MessageBox.Show("Order thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        txt_soluong.Text = "";
+                        var ban = _context.bans.Find(BanID);
+                        //Sua lai tinh trang ban
+                        if (ban.TinhTrang == false)
+                        {
+                            _context.Entry(ban).State = System.Data.Entity.EntityState.Modified;
+                            ban.TinhTrang = true;
+                            _context.SaveChanges();
+                        }
                     }
                 }
                 catch

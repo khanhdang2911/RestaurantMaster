@@ -13,7 +13,7 @@ namespace winform_project
         public AppDbContext(): base("myConnect")
         {
         }
-
+        
         protected override void OnModelCreating(DbModelBuilder dbModelBuilder)
         {
             base.OnModelCreating(dbModelBuilder);

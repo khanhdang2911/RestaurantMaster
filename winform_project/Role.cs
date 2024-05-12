@@ -16,5 +16,10 @@ namespace winform_project
         public int Id { set; get; }
         [DisplayName("Tên role")]
         public string TenRole { set; get; }
+
+        public override string ToString()
+        {
+            return this.TenRole;
+        }
     }
 }

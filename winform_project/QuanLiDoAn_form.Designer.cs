@@ -68,7 +68,7 @@
             this.lbl_address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_address.ForeColor = System.Drawing.Color.Black;
             this.lbl_address.Location = new System.Drawing.Point(37, 71);
-            this.lbl_address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbl_address.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_address.Name = "lbl_address";
             this.lbl_address.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_address.Size = new System.Drawing.Size(72, 25);
@@ -87,7 +87,7 @@
             this.lbl_phone.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_phone.ForeColor = System.Drawing.Color.Black;
             this.lbl_phone.Location = new System.Drawing.Point(411, 15);
-            this.lbl_phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbl_phone.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_phone.Name = "lbl_phone";
             this.lbl_phone.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_phone.Size = new System.Drawing.Size(108, 24);
@@ -107,7 +107,7 @@
             this.lbl_monAn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_monAn.ForeColor = System.Drawing.Color.Black;
             this.lbl_monAn.Location = new System.Drawing.Point(37, 12);
-            this.lbl_monAn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbl_monAn.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_monAn.Name = "lbl_monAn";
             this.lbl_monAn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_monAn.Size = new System.Drawing.Size(87, 27);
@@ -123,7 +123,8 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bunifuDataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bunifuDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bunifuDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -167,13 +168,13 @@
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(2, 178);
-            this.bunifuDataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
             this.bunifuDataGridView1.ReadOnly = true;
             this.bunifuDataGridView1.RowHeadersVisible = false;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(752, 233);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(766, 260);
             this.bunifuDataGridView1.TabIndex = 18;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Teal;
             this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
@@ -211,7 +212,7 @@
             this.txt_giatien.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_giatien.Lines = new string[0];
             this.txt_giatien.Location = new System.Drawing.Point(132, 71);
-            this.txt_giatien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_giatien.Margin = new System.Windows.Forms.Padding(4);
             this.txt_giatien.MaxLength = 32767;
             this.txt_giatien.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_giatien.Modified = false;
@@ -237,7 +238,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_giatien.OnIdleState = stateProperties4;
-            this.txt_giatien.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_giatien.Padding = new System.Windows.Forms.Padding(4);
             this.txt_giatien.PasswordChar = '\0';
             this.txt_giatien.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_giatien.PlaceholderText = "";
@@ -247,7 +248,7 @@
             this.txt_giatien.SelectionLength = 0;
             this.txt_giatien.SelectionStart = 0;
             this.txt_giatien.ShortcutsEnabled = true;
-            this.txt_giatien.Size = new System.Drawing.Size(196, 25);
+            this.txt_giatien.Size = new System.Drawing.Size(196, 40);
             this.txt_giatien.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_giatien.TabIndex = 26;
             this.txt_giatien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -286,7 +287,7 @@
             this.txt_tenmon.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_tenmon.Lines = new string[0];
             this.txt_tenmon.Location = new System.Drawing.Point(132, 12);
-            this.txt_tenmon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_tenmon.Margin = new System.Windows.Forms.Padding(4);
             this.txt_tenmon.MaxLength = 32767;
             this.txt_tenmon.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_tenmon.Modified = false;
@@ -312,7 +313,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_tenmon.OnIdleState = stateProperties8;
-            this.txt_tenmon.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_tenmon.Padding = new System.Windows.Forms.Padding(4);
             this.txt_tenmon.PasswordChar = '\0';
             this.txt_tenmon.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_tenmon.PlaceholderText = "";
@@ -322,7 +323,7 @@
             this.txt_tenmon.SelectionLength = 0;
             this.txt_tenmon.SelectionStart = 0;
             this.txt_tenmon.ShortcutsEnabled = true;
-            this.txt_tenmon.Size = new System.Drawing.Size(251, 34);
+            this.txt_tenmon.Size = new System.Drawing.Size(251, 40);
             this.txt_tenmon.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_tenmon.TabIndex = 22;
             this.txt_tenmon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -418,7 +419,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(755, 428);
+            this.ClientSize = new System.Drawing.Size(770, 440);
             this.Controls.Add(this.checkbox_tinhtrang);
             this.Controls.Add(this.lbl_tinhtrang);
             this.Controls.Add(this.btn_suamon);
@@ -433,8 +434,10 @@
             this.Controls.Add(this.bunifuDataGridView1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLiDoAn_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí đồ ăn";
             this.Load += new System.EventHandler(this.QuanLiDoAn_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();

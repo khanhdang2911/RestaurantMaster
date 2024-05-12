@@ -53,33 +53,30 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.list_nhanvien = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.lbl_hoten = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbl_email = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_phone = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbl_luong = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_password = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_address = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse7 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btn_search = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.txt_userName = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.txt_luong = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.txt_phone = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.txt_email = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.txt_hoten = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btn_themNhanVien = new System.Windows.Forms.Button();
             this.btn_xoaNhanVien = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.lbl_role = new Bunifu.UI.WinForms.BunifuLabel();
+            this.cbb_role = new System.Windows.Forms.ComboBox();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_search = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.txt_userName = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.txt_password = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.txt_phone = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.txt_hoten = new Bunifu.UI.WinForms.BunifuTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.list_nhanvien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_search)).BeginInit();
             this.SuspendLayout();
@@ -101,7 +98,8 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.list_nhanvien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.list_nhanvien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.list_nhanvien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.list_nhanvien.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.list_nhanvien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.list_nhanvien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.list_nhanvien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -146,10 +144,11 @@
             this.list_nhanvien.HeaderForeColor = System.Drawing.Color.White;
             this.list_nhanvien.Location = new System.Drawing.Point(34, 220);
             this.list_nhanvien.Name = "list_nhanvien";
+            this.list_nhanvien.ReadOnly = true;
             this.list_nhanvien.RowHeadersVisible = false;
             this.list_nhanvien.RowTemplate.Height = 40;
             this.list_nhanvien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.list_nhanvien.Size = new System.Drawing.Size(733, 211);
+            this.list_nhanvien.Size = new System.Drawing.Size(736, 251);
             this.list_nhanvien.TabIndex = 0;
             this.list_nhanvien.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.list_nhanvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.list_nhanvien_CellContentClick);
@@ -166,29 +165,12 @@
             this.lbl_hoten.Location = new System.Drawing.Point(43, 12);
             this.lbl_hoten.Name = "lbl_hoten";
             this.lbl_hoten.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_hoten.Size = new System.Drawing.Size(50, 27);
+            this.lbl_hoten.Size = new System.Drawing.Size(94, 27);
             this.lbl_hoten.TabIndex = 1;
             this.lbl_hoten.Text = "Họ tên";
             this.lbl_hoten.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_hoten.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lbl_hoten.Click += new System.EventHandler(this.bunifuLabel1_Click);
-            // 
-            // lbl_email
-            // 
-            this.lbl_email.AllowParentOverrides = false;
-            this.lbl_email.AutoEllipsis = false;
-            this.lbl_email.AutoSize = false;
-            this.lbl_email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.lbl_email.CursorType = null;
-            this.lbl_email.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_email.Location = new System.Drawing.Point(43, 61);
-            this.lbl_email.Name = "lbl_email";
-            this.lbl_email.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_email.Size = new System.Drawing.Size(50, 27);
-            this.lbl_email.TabIndex = 2;
-            this.lbl_email.Text = "Email";
-            this.lbl_email.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_email.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbl_phone
             // 
@@ -198,31 +180,31 @@
             this.lbl_phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lbl_phone.CursorType = null;
             this.lbl_phone.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_phone.Location = new System.Drawing.Point(43, 110);
+            this.lbl_phone.Location = new System.Drawing.Point(43, 61);
             this.lbl_phone.Name = "lbl_phone";
             this.lbl_phone.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_phone.Size = new System.Drawing.Size(50, 27);
+            this.lbl_phone.Size = new System.Drawing.Size(94, 27);
             this.lbl_phone.TabIndex = 3;
-            this.lbl_phone.Text = "Phone";
+            this.lbl_phone.Text = "Số điện thoại";
             this.lbl_phone.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_phone.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lbl_luong
+            // lbl_password
             // 
-            this.lbl_luong.AllowParentOverrides = false;
-            this.lbl_luong.AutoEllipsis = false;
-            this.lbl_luong.AutoSize = false;
-            this.lbl_luong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.lbl_luong.CursorType = null;
-            this.lbl_luong.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_luong.Location = new System.Drawing.Point(408, 61);
-            this.lbl_luong.Name = "lbl_luong";
-            this.lbl_luong.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_luong.Size = new System.Drawing.Size(56, 27);
-            this.lbl_luong.TabIndex = 11;
-            this.lbl_luong.Text = "Lương:";
-            this.lbl_luong.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_luong.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbl_password.AllowParentOverrides = false;
+            this.lbl_password.AutoEllipsis = false;
+            this.lbl_password.AutoSize = false;
+            this.lbl_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.lbl_password.CursorType = null;
+            this.lbl_password.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_password.Location = new System.Drawing.Point(386, 61);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_password.Size = new System.Drawing.Size(113, 27);
+            this.lbl_password.TabIndex = 11;
+            this.lbl_password.Text = "Mật khẩu";
+            this.lbl_password.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_password.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbl_address
             // 
@@ -232,12 +214,12 @@
             this.lbl_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.lbl_address.CursorType = null;
             this.lbl_address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_address.Location = new System.Drawing.Point(408, 12);
+            this.lbl_address.Location = new System.Drawing.Point(386, 12);
             this.lbl_address.Name = "lbl_address";
             this.lbl_address.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_address.Size = new System.Drawing.Size(69, 27);
+            this.lbl_address.Size = new System.Drawing.Size(113, 27);
             this.lbl_address.TabIndex = 12;
-            this.lbl_address.Text = "Username";
+            this.lbl_address.Text = "Tên người dùng";
             this.lbl_address.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_address.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -249,7 +231,7 @@
             // bunifuElipse4
             // 
             this.bunifuElipse4.ElipseRadius = 11;
-            this.bunifuElipse4.TargetControl = this.lbl_email;
+            this.bunifuElipse4.TargetControl = this;
             // 
             // bunifuElipse5
             // 
@@ -264,7 +246,81 @@
             // bunifuElipse7
             // 
             this.bunifuElipse7.ElipseRadius = 17;
-            this.bunifuElipse7.TargetControl = this.lbl_luong;
+            this.bunifuElipse7.TargetControl = this.lbl_password;
+            // 
+            // btn_themNhanVien
+            // 
+            this.btn_themNhanVien.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btn_themNhanVien.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themNhanVien.Location = new System.Drawing.Point(34, 180);
+            this.btn_themNhanVien.Name = "btn_themNhanVien";
+            this.btn_themNhanVien.Size = new System.Drawing.Size(121, 34);
+            this.btn_themNhanVien.TabIndex = 20;
+            this.btn_themNhanVien.Text = "Thêm nhân viên";
+            this.btn_themNhanVien.UseVisualStyleBackColor = false;
+            this.btn_themNhanVien.Click += new System.EventHandler(this.btn_themNhanVien_Click);
+            // 
+            // btn_xoaNhanVien
+            // 
+            this.btn_xoaNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_xoaNhanVien.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoaNhanVien.Location = new System.Drawing.Point(161, 180);
+            this.btn_xoaNhanVien.Name = "btn_xoaNhanVien";
+            this.btn_xoaNhanVien.Size = new System.Drawing.Size(84, 34);
+            this.btn_xoaNhanVien.TabIndex = 21;
+            this.btn_xoaNhanVien.Text = "Xóa";
+            this.btn_xoaNhanVien.UseVisualStyleBackColor = false;
+            this.btn_xoaNhanVien.Click += new System.EventHandler(this.btn_xoaNhanVien_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SpringGreen;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(357, 180);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(107, 34);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Sửa thông tin";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lbl_role
+            // 
+            this.lbl_role.AllowParentOverrides = false;
+            this.lbl_role.AutoEllipsis = true;
+            this.lbl_role.AutoSize = false;
+            this.lbl_role.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbl_role.CursorType = null;
+            this.lbl_role.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_role.Location = new System.Drawing.Point(43, 139);
+            this.lbl_role.Name = "lbl_role";
+            this.lbl_role.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_role.Size = new System.Drawing.Size(50, 26);
+            this.lbl_role.TabIndex = 23;
+            this.lbl_role.Text = "Vai trò";
+            this.lbl_role.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_role.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // cbb_role
+            // 
+            this.cbb_role.FormattingEnabled = true;
+            this.cbb_role.Location = new System.Drawing.Point(99, 139);
+            this.cbb_role.Name = "cbb_role";
+            this.cbb_role.Size = new System.Drawing.Size(125, 21);
+            this.cbb_role.TabIndex = 24;
+            // 
+            // btn_clear
+            // 
+            this.btn_clear.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_clear.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.ForeColor = System.Drawing.Color.White;
+            this.btn_clear.Location = new System.Drawing.Point(263, 180);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(79, 34);
+            this.btn_clear.TabIndex = 25;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_search
             // 
@@ -275,7 +331,7 @@
             this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_search.Image = ((System.Drawing.Image)(resources.GetObject("btn_search.Image")));
             this.btn_search.IsCircle = true;
-            this.btn_search.Location = new System.Drawing.Point(682, 179);
+            this.btn_search.Location = new System.Drawing.Point(692, 180);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(35, 35);
             this.btn_search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -384,7 +440,7 @@
             this.txt_userName.IconRight = null;
             this.txt_userName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_userName.Lines = new string[0];
-            this.txt_userName.Location = new System.Drawing.Point(483, 12);
+            this.txt_userName.Location = new System.Drawing.Point(524, 12);
             this.txt_userName.MaxLength = 32767;
             this.txt_userName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_userName.Modified = false;
@@ -431,79 +487,79 @@
             this.txt_userName.UseSystemPasswordChar = false;
             this.txt_userName.WordWrap = true;
             // 
-            // txt_luong
+            // txt_password
             // 
-            this.txt_luong.AcceptsReturn = false;
-            this.txt_luong.AcceptsTab = false;
-            this.txt_luong.AnimationSpeed = 200;
-            this.txt_luong.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txt_luong.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txt_luong.BackColor = System.Drawing.Color.Transparent;
-            this.txt_luong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_luong.BackgroundImage")));
-            this.txt_luong.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txt_luong.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txt_luong.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txt_luong.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txt_luong.BorderRadius = 1;
-            this.txt_luong.BorderThickness = 1;
-            this.txt_luong.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_luong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_luong.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txt_luong.DefaultText = "";
-            this.txt_luong.FillColor = System.Drawing.Color.White;
-            this.txt_luong.HideSelection = true;
-            this.txt_luong.IconLeft = null;
-            this.txt_luong.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_luong.IconPadding = 10;
-            this.txt_luong.IconRight = null;
-            this.txt_luong.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_luong.Lines = new string[0];
-            this.txt_luong.Location = new System.Drawing.Point(483, 61);
-            this.txt_luong.MaxLength = 32767;
-            this.txt_luong.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txt_luong.Modified = false;
-            this.txt_luong.Multiline = false;
-            this.txt_luong.Name = "txt_luong";
+            this.txt_password.AcceptsReturn = false;
+            this.txt_password.AcceptsTab = false;
+            this.txt_password.AnimationSpeed = 200;
+            this.txt_password.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_password.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_password.BackColor = System.Drawing.Color.Transparent;
+            this.txt_password.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_password.BackgroundImage")));
+            this.txt_password.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txt_password.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txt_password.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txt_password.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txt_password.BorderRadius = 1;
+            this.txt_password.BorderThickness = 1;
+            this.txt_password.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_password.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txt_password.DefaultText = "";
+            this.txt_password.FillColor = System.Drawing.Color.White;
+            this.txt_password.HideSelection = true;
+            this.txt_password.IconLeft = null;
+            this.txt_password.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_password.IconPadding = 10;
+            this.txt_password.IconRight = null;
+            this.txt_password.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_password.Lines = new string[0];
+            this.txt_password.Location = new System.Drawing.Point(525, 61);
+            this.txt_password.MaxLength = 32767;
+            this.txt_password.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txt_password.Modified = false;
+            this.txt_password.Multiline = false;
+            this.txt_password.Name = "txt_password";
             stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties9.FillColor = System.Drawing.Color.Empty;
             stateProperties9.ForeColor = System.Drawing.Color.Empty;
             stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_luong.OnActiveState = stateProperties9;
+            this.txt_password.OnActiveState = stateProperties9;
             stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_luong.OnDisabledState = stateProperties10;
+            this.txt_password.OnDisabledState = stateProperties10;
             stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties11.FillColor = System.Drawing.Color.Empty;
             stateProperties11.ForeColor = System.Drawing.Color.Empty;
             stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_luong.OnHoverState = stateProperties11;
+            this.txt_password.OnHoverState = stateProperties11;
             stateProperties12.BorderColor = System.Drawing.Color.Silver;
             stateProperties12.FillColor = System.Drawing.Color.White;
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_luong.OnIdleState = stateProperties12;
-            this.txt_luong.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_luong.PasswordChar = '\0';
-            this.txt_luong.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_luong.PlaceholderText = "";
-            this.txt_luong.ReadOnly = false;
-            this.txt_luong.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_luong.SelectedText = "";
-            this.txt_luong.SelectionLength = 0;
-            this.txt_luong.SelectionStart = 0;
-            this.txt_luong.ShortcutsEnabled = true;
-            this.txt_luong.Size = new System.Drawing.Size(193, 27);
-            this.txt_luong.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_luong.TabIndex = 8;
-            this.txt_luong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txt_luong.TextMarginBottom = 0;
-            this.txt_luong.TextMarginLeft = 3;
-            this.txt_luong.TextMarginTop = 0;
-            this.txt_luong.TextPlaceholder = "";
-            this.txt_luong.UseSystemPasswordChar = false;
-            this.txt_luong.WordWrap = true;
+            this.txt_password.OnIdleState = stateProperties12;
+            this.txt_password.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_password.PasswordChar = '\0';
+            this.txt_password.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_password.PlaceholderText = "";
+            this.txt_password.ReadOnly = false;
+            this.txt_password.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_password.SelectedText = "";
+            this.txt_password.SelectionLength = 0;
+            this.txt_password.SelectionStart = 0;
+            this.txt_password.ShortcutsEnabled = true;
+            this.txt_password.Size = new System.Drawing.Size(193, 27);
+            this.txt_password.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txt_password.TabIndex = 8;
+            this.txt_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_password.TextMarginBottom = 0;
+            this.txt_password.TextMarginLeft = 3;
+            this.txt_password.TextMarginTop = 0;
+            this.txt_password.TextPlaceholder = "";
+            this.txt_password.UseSystemPasswordChar = false;
+            this.txt_password.WordWrap = true;
             // 
             // txt_phone
             // 
@@ -532,7 +588,7 @@
             this.txt_phone.IconRight = null;
             this.txt_phone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_phone.Lines = new string[0];
-            this.txt_phone.Location = new System.Drawing.Point(99, 110);
+            this.txt_phone.Location = new System.Drawing.Point(143, 61);
             this.txt_phone.MaxLength = 32767;
             this.txt_phone.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_phone.Modified = false;
@@ -568,7 +624,7 @@
             this.txt_phone.SelectionLength = 0;
             this.txt_phone.SelectionStart = 0;
             this.txt_phone.ShortcutsEnabled = true;
-            this.txt_phone.Size = new System.Drawing.Size(269, 27);
+            this.txt_phone.Size = new System.Drawing.Size(214, 27);
             this.txt_phone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_phone.TabIndex = 6;
             this.txt_phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -578,80 +634,6 @@
             this.txt_phone.TextPlaceholder = "";
             this.txt_phone.UseSystemPasswordChar = false;
             this.txt_phone.WordWrap = true;
-            // 
-            // txt_email
-            // 
-            this.txt_email.AcceptsReturn = false;
-            this.txt_email.AcceptsTab = false;
-            this.txt_email.AnimationSpeed = 200;
-            this.txt_email.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txt_email.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txt_email.BackColor = System.Drawing.Color.Transparent;
-            this.txt_email.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_email.BackgroundImage")));
-            this.txt_email.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txt_email.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txt_email.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txt_email.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txt_email.BorderRadius = 1;
-            this.txt_email.BorderThickness = 1;
-            this.txt_email.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_email.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_email.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txt_email.DefaultText = "";
-            this.txt_email.FillColor = System.Drawing.Color.White;
-            this.txt_email.HideSelection = true;
-            this.txt_email.IconLeft = null;
-            this.txt_email.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_email.IconPadding = 10;
-            this.txt_email.IconRight = null;
-            this.txt_email.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_email.Lines = new string[0];
-            this.txt_email.Location = new System.Drawing.Point(99, 61);
-            this.txt_email.MaxLength = 32767;
-            this.txt_email.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txt_email.Modified = false;
-            this.txt_email.Multiline = false;
-            this.txt_email.Name = "txt_email";
-            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_email.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_email.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties19.FillColor = System.Drawing.Color.Empty;
-            stateProperties19.ForeColor = System.Drawing.Color.Empty;
-            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_email.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.Silver;
-            stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.Color.Empty;
-            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_email.OnIdleState = stateProperties20;
-            this.txt_email.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_email.PasswordChar = '\0';
-            this.txt_email.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_email.PlaceholderText = "";
-            this.txt_email.ReadOnly = false;
-            this.txt_email.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_email.SelectedText = "";
-            this.txt_email.SelectionLength = 0;
-            this.txt_email.SelectionStart = 0;
-            this.txt_email.ShortcutsEnabled = true;
-            this.txt_email.Size = new System.Drawing.Size(269, 27);
-            this.txt_email.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_email.TabIndex = 5;
-            this.txt_email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txt_email.TextMarginBottom = 0;
-            this.txt_email.TextMarginLeft = 3;
-            this.txt_email.TextMarginTop = 0;
-            this.txt_email.TextPlaceholder = "";
-            this.txt_email.UseSystemPasswordChar = false;
-            this.txt_email.WordWrap = true;
             // 
             // txt_hoten
             // 
@@ -680,32 +662,32 @@
             this.txt_hoten.IconRight = null;
             this.txt_hoten.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_hoten.Lines = new string[0];
-            this.txt_hoten.Location = new System.Drawing.Point(99, 12);
+            this.txt_hoten.Location = new System.Drawing.Point(143, 12);
             this.txt_hoten.MaxLength = 32767;
             this.txt_hoten.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_hoten.Modified = false;
             this.txt_hoten.Multiline = false;
             this.txt_hoten.Name = "txt_hoten";
-            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties21.FillColor = System.Drawing.Color.Empty;
-            stateProperties21.ForeColor = System.Drawing.Color.Empty;
-            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_hoten.OnActiveState = stateProperties21;
-            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_hoten.OnDisabledState = stateProperties22;
-            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties23.FillColor = System.Drawing.Color.Empty;
-            stateProperties23.ForeColor = System.Drawing.Color.Empty;
-            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_hoten.OnHoverState = stateProperties23;
-            stateProperties24.BorderColor = System.Drawing.Color.Silver;
-            stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.Empty;
-            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_hoten.OnIdleState = stateProperties24;
+            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties17.FillColor = System.Drawing.Color.Empty;
+            stateProperties17.ForeColor = System.Drawing.Color.Empty;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_hoten.OnActiveState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_hoten.OnDisabledState = stateProperties18;
+            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties19.FillColor = System.Drawing.Color.Empty;
+            stateProperties19.ForeColor = System.Drawing.Color.Empty;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_hoten.OnHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.Silver;
+            stateProperties20.FillColor = System.Drawing.Color.White;
+            stateProperties20.ForeColor = System.Drawing.Color.Empty;
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_hoten.OnIdleState = stateProperties20;
             this.txt_hoten.Padding = new System.Windows.Forms.Padding(3);
             this.txt_hoten.PasswordChar = '\0';
             this.txt_hoten.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -716,7 +698,7 @@
             this.txt_hoten.SelectionLength = 0;
             this.txt_hoten.SelectionStart = 0;
             this.txt_hoten.ShortcutsEnabled = true;
-            this.txt_hoten.Size = new System.Drawing.Size(269, 27);
+            this.txt_hoten.Size = new System.Drawing.Size(230, 27);
             this.txt_hoten.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_hoten.TabIndex = 4;
             this.txt_hoten.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -727,84 +709,58 @@
             this.txt_hoten.UseSystemPasswordChar = false;
             this.txt_hoten.WordWrap = true;
             // 
-            // btn_themNhanVien
-            // 
-            this.btn_themNhanVien.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btn_themNhanVien.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_themNhanVien.Location = new System.Drawing.Point(61, 180);
-            this.btn_themNhanVien.Name = "btn_themNhanVien";
-            this.btn_themNhanVien.Size = new System.Drawing.Size(121, 34);
-            this.btn_themNhanVien.TabIndex = 20;
-            this.btn_themNhanVien.Text = "Thêm nhân viên";
-            this.btn_themNhanVien.UseVisualStyleBackColor = false;
-            // 
-            // btn_xoaNhanVien
-            // 
-            this.btn_xoaNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_xoaNhanVien.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoaNhanVien.Location = new System.Drawing.Point(217, 180);
-            this.btn_xoaNhanVien.Name = "btn_xoaNhanVien";
-            this.btn_xoaNhanVien.Size = new System.Drawing.Size(84, 34);
-            this.btn_xoaNhanVien.TabIndex = 21;
-            this.btn_xoaNhanVien.Text = "Xóa";
-            this.btn_xoaNhanVien.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SpringGreen;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(357, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 34);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Sửa thông tin";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // QuanLiNhanVien_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(797, 455);
+            this.ClientSize = new System.Drawing.Size(820, 475);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.cbb_role);
+            this.Controls.Add(this.lbl_role);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_xoaNhanVien);
             this.Controls.Add(this.btn_themNhanVien);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.bunifuTextBox1);
             this.Controls.Add(this.lbl_address);
-            this.Controls.Add(this.lbl_luong);
+            this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.txt_userName);
-            this.Controls.Add(this.txt_luong);
+            this.Controls.Add(this.txt_password);
             this.Controls.Add(this.txt_phone);
-            this.Controls.Add(this.txt_email);
             this.Controls.Add(this.txt_hoten);
             this.Controls.Add(this.lbl_phone);
-            this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.lbl_hoten);
             this.Controls.Add(this.list_nhanvien);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QuanLiNhanVien_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí nhân viên";
+            this.Load += new System.EventHandler(this.QuanLiNhanVien_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.list_nhanvien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_search)).EndInit();
             this.ResumeLayout(false);
 
+        }
+        public void thayDoiStyle()
+        {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
         }
 
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.UI.WinForms.BunifuLabel lbl_phone;
-        private Bunifu.UI.WinForms.BunifuLabel lbl_email;
         private Bunifu.UI.WinForms.BunifuLabel lbl_hoten;
         private Bunifu.UI.WinForms.BunifuDataGridView list_nhanvien;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.UI.WinForms.BunifuTextBox txt_phone;
-        private Bunifu.UI.WinForms.BunifuTextBox txt_email;
         private Bunifu.UI.WinForms.BunifuTextBox txt_hoten;
         private Bunifu.UI.WinForms.BunifuTextBox txt_userName;
-        private Bunifu.UI.WinForms.BunifuTextBox txt_luong;
-        private Bunifu.UI.WinForms.BunifuLabel lbl_luong;
+        private Bunifu.UI.WinForms.BunifuTextBox txt_password;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_password;
         private Bunifu.UI.WinForms.BunifuLabel lbl_address;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
@@ -816,5 +772,8 @@
         private System.Windows.Forms.Button btn_themNhanVien;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_xoaNhanVien;
+        private System.Windows.Forms.ComboBox cbb_role;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_role;
+        private System.Windows.Forms.Button btn_clear;
     }
 }
