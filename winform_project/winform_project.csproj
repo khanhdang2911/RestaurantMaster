@@ -215,6 +215,18 @@
     <Compile Include="goimon_form.Designer.cs">
       <DependentUpon>goimon_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLiBan_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiBan_form.Designer.cs">
+      <DependentUpon>QuanLiBan_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiHoaDon_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiHoaDon_form.Designer.cs">
+      <DependentUpon>QuanLiHoaDon_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\HashPassword.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="Login_form.cs">
@@ -334,11 +346,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuanLiBan_form.resx">
+      <DependentUpon>QuanLiBan_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLiDanhMuc_form.resx">
       <DependentUpon>QuanLiDanhMuc_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLiDoAn_form.resx">
       <DependentUpon>QuanLiDoAn_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiHoaDon_form.resx">
+      <DependentUpon>QuanLiHoaDon_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLiNhanVien_form.resx">
       <DependentUpon>QuanLiNhanVien_form.cs</DependentUpon>

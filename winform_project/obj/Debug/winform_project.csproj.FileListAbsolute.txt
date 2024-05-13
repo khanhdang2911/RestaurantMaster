@@ -223,3 +223,5 @@ D:\winform_project\winform_project\bin\Debug\Microsoft.SqlServer.Server.dll
 D:\winform_project\winform_project\bin\Debug\Microsoft.SqlServer.Server.pdb
 D:\winform_project\winform_project\bin\Debug\Microsoft.SqlServer.Server.xml
 D:\winform_project\winform_project\obj\Debug\winform_project.DoiMatKhau_form.resources
+D:\winform_project\winform_project\obj\Debug\winform_project.QuanLiBan_form.resources
+D:\winform_project\winform_project\obj\Debug\winform_project.QuanLiHoaDon_form.resources

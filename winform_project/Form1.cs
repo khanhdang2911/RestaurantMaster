@@ -100,7 +100,7 @@ namespace winform_project
             var IdroleNhanVien = _context.roles.Where(c => c.TenRole == "Nhanvien").FirstOrDefault();
             if (User.RoleId == IdroleNhanVien.Id)
             {
-
+                btn_quanliban.Hide();
                 btn_quanliNhanVien.Hide();
 
             }
@@ -155,8 +155,9 @@ namespace winform_project
                 
 
                 goimon_form goimon_Form = new goimon_form(int.Parse(currentBan.Cells[0].Value.ToString()));
-                goimon_Form.Show();
                 goimon_Form.FormBorderStyle = FormBorderStyle.Sizable;
+                goimon_Form.Show();
+                
                
             }
 
@@ -197,6 +198,26 @@ namespace winform_project
         private void lbl_yourName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_quanliban_Click(object sender, EventArgs e)
+        {
+            QuanLiBan_form quanliban_Form = new QuanLiBan_form();
+            quanliban_Form.FormBorderStyle = FormBorderStyle.Sizable;
+            quanliban_Form.Show();
+            
+        }
+
+        private void lbl_table_Click(object sender, EventArgs e)
+        {
+            dtg_danhsachban.DataSource = _context.bans.ToList();
+        }
+
+        private void btn_quanliHoaDon_Click(object sender, EventArgs e)
+        {
+            QuanLiHoaDon_form quanlHoaDon_Form = new QuanLiHoaDon_form();
+            quanlHoaDon_Form.FormBorderStyle = FormBorderStyle.Sizable;
+            quanlHoaDon_Form.Show();
         }
     }
 }
