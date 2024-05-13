@@ -179,6 +179,7 @@ namespace winform_project
         private void QuanLiDoAn_form_Load(object sender, EventArgs e)
         {
             LoadDataAsync();
+            cbb_danhmuc.KeyPress += cbb_danhmuc_KeyPress;
         }
 
         private void btn_suamon_Click(object sender, EventArgs e)
@@ -217,8 +218,13 @@ namespace winform_project
                     MessageBox.Show("Sửa đổi thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 
-                
+              
             }
+        }
+
+        private void cbb_danhmuc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

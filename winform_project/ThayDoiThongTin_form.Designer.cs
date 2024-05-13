@@ -131,6 +131,7 @@
             this.button_doimatkhau.TabIndex = 27;
             this.button_doimatkhau.Text = "Đổi mật khẩu";
             this.button_doimatkhau.UseVisualStyleBackColor = false;
+            this.button_doimatkhau.Click += new System.EventHandler(this.button_doimatkhau_Click);
             // 
             // bunifuPictureBox1
             // 
@@ -279,7 +280,7 @@
             this.txt_userName.PasswordChar = '\0';
             this.txt_userName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_userName.PlaceholderText = "";
-            this.txt_userName.ReadOnly = false;
+            this.txt_userName.ReadOnly = true;
             this.txt_userName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_userName.SelectedText = "";
             this.txt_userName.SelectionLength = 0;

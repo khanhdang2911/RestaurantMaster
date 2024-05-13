@@ -150,7 +150,7 @@
             this.dtg_danhsachmonOrder.RowHeadersVisible = false;
             this.dtg_danhsachmonOrder.RowTemplate.Height = 40;
             this.dtg_danhsachmonOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_danhsachmonOrder.Size = new System.Drawing.Size(510, 204);
+            this.dtg_danhsachmonOrder.Size = new System.Drawing.Size(581, 256);
             this.dtg_danhsachmonOrder.TabIndex = 4;
             this.dtg_danhsachmonOrder.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Orange;
             this.dtg_danhsachmonOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_danhsachmonOrder_CellContentClick);
@@ -159,7 +159,7 @@
             // 
             this.btn_xoaNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_xoaNhanVien.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoaNhanVien.Location = new System.Drawing.Point(287, 195);
+            this.btn_xoaNhanVien.Location = new System.Drawing.Point(324, 195);
             this.btn_xoaNhanVien.Name = "btn_xoaNhanVien";
             this.btn_xoaNhanVien.Size = new System.Drawing.Size(84, 34);
             this.btn_xoaNhanVien.TabIndex = 23;
@@ -260,7 +260,7 @@
             this.txt_soluong.SelectionLength = 0;
             this.txt_soluong.SelectionStart = 0;
             this.txt_soluong.ShortcutsEnabled = true;
-            this.txt_soluong.Size = new System.Drawing.Size(174, 24);
+            this.txt_soluong.Size = new System.Drawing.Size(240, 24);
             this.txt_soluong.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_soluong.TabIndex = 3;
             this.txt_soluong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -334,7 +334,7 @@
             this.txt_tenmon.SelectionLength = 0;
             this.txt_tenmon.SelectionStart = 0;
             this.txt_tenmon.ShortcutsEnabled = true;
-            this.txt_tenmon.Size = new System.Drawing.Size(174, 24);
+            this.txt_tenmon.Size = new System.Drawing.Size(240, 24);
             this.txt_tenmon.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_tenmon.TabIndex = 1;
             this.txt_tenmon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -350,7 +350,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(525, 463);
+            this.ClientSize = new System.Drawing.Size(589, 504);
             this.Controls.Add(this.lbl_TenBan);
             this.Controls.Add(this.btn_xoaNhanVien);
             this.Controls.Add(this.btn_goimon);

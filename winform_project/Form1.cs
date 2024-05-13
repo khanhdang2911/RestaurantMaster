@@ -156,6 +156,7 @@ namespace winform_project
 
                 goimon_form goimon_Form = new goimon_form(int.Parse(currentBan.Cells[0].Value.ToString()));
                 goimon_Form.Show();
+                goimon_Form.FormBorderStyle = FormBorderStyle.Sizable;
                
             }
 

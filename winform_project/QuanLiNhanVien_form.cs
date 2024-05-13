@@ -53,7 +53,7 @@ namespace winform_project
                 var nhanvien = _context.nguoiDungs.Where(c => c.Id == Id).FirstOrDefault();
                 txt_hoten.Text = nhanvien.HoTen;
                 txt_phone.Text = nhanvien.Phone;
-                txt_password.Text = "***********";
+                txt_password.Text = "●●●●●●●●●●";
                 txt_userName.Text = nhanvien.Username;
                 cbb_role.SelectedItem = _context.roles.Find(nhanvien.RoleId);
             }
@@ -86,7 +86,10 @@ namespace winform_project
         private void QuanLiNhanVien_form_Load(object sender, EventArgs e)
         {
             LoadDataAsync();
+            cbb_role.KeyPress += cbb_role_KeyPress;
         }
+
+
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
@@ -238,6 +241,11 @@ namespace winform_project
             {
                 MessageBox.Show("Bạn chưa chọn tài khoản muốn sửa.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void cbb_role_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

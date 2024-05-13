@@ -173,7 +173,7 @@
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_xacnhanlaimatkhau.OnIdleState = stateProperties4;
             this.txt_xacnhanlaimatkhau.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_xacnhanlaimatkhau.PasswordChar = '*';
+            this.txt_xacnhanlaimatkhau.PasswordChar = '●';
             this.txt_xacnhanlaimatkhau.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_xacnhanlaimatkhau.PlaceholderText = "";
             this.txt_xacnhanlaimatkhau.ReadOnly = false;
@@ -220,7 +220,7 @@
             this.txt_matkhaumoi.IconRight = null;
             this.txt_matkhaumoi.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_matkhaumoi.Lines = new string[0];
-            this.txt_matkhaumoi.Location = new System.Drawing.Point(234, 150);
+            this.txt_matkhaumoi.Location = new System.Drawing.Point(234, 162);
             this.txt_matkhaumoi.MaxLength = 32767;
             this.txt_matkhaumoi.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_matkhaumoi.Modified = false;
@@ -247,7 +247,7 @@
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_matkhaumoi.OnIdleState = stateProperties8;
             this.txt_matkhaumoi.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_matkhaumoi.PasswordChar = '*';
+            this.txt_matkhaumoi.PasswordChar = '●';
             this.txt_matkhaumoi.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_matkhaumoi.PlaceholderText = "";
             this.txt_matkhaumoi.ReadOnly = false;
@@ -321,7 +321,7 @@
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_matkhaucu.OnIdleState = stateProperties12;
             this.txt_matkhaucu.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_matkhaucu.PasswordChar = '*';
+            this.txt_matkhaucu.PasswordChar = '●';
             this.txt_matkhaucu.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_matkhaucu.PlaceholderText = "";
             this.txt_matkhaucu.ReadOnly = false;
@@ -340,6 +340,7 @@
             this.txt_matkhaucu.TextPlaceholder = "";
             this.txt_matkhaucu.UseSystemPasswordChar = false;
             this.txt_matkhaucu.WordWrap = true;
+            this.txt_matkhaucu.TextChanged += new System.EventHandler(this.txt_matkhaucu_TextChanged);
             // 
             // btn_luuMatKhau
             // 
@@ -429,11 +430,13 @@
             this.btn_luuMatKhau.TextMarginLeft = 0;
             this.btn_luuMatKhau.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_luuMatKhau.UseDefaultRadiusAndThickness = true;
+            this.btn_luuMatKhau.Click += new System.EventHandler(this.btn_luuMatKhau_Click);
             // 
             // DoiMatKhau_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(523, 328);
             this.Controls.Add(this.btn_luuMatKhau);
             this.Controls.Add(this.pictureBox1);
@@ -444,7 +447,9 @@
             this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.lbl_hoten);
             this.Name = "DoiMatKhau_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DoiMatKhau_form";
+            this.Load += new System.EventHandler(this.DoiMatKhau_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

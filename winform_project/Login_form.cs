@@ -28,17 +28,20 @@ namespace winform_project
         {
             string username=txt_userName.Text;
             string password = txt_password.Text;
-            var user = _context.nguoiDungs.Where(c => c.Username == username && password == password).FirstOrDefault();
-            if (user==null)
+
+            var user = _context.nguoiDungs.FirstOrDefault(c => c.Username == username);
+
+            if (user != null && HashPasswordByBC.VerifyPassword(password, user.Password))
             {
-                MessageBox.Show("Sai tên người dùng hoặc mặt khẩu.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Hop he
+                this.Hide();
+                Form1 f1 = new Form1(user);
+                f1.Show();
             }
 
             else
             {
-                this.Hide();
-                Form1 f1 = new Form1(user);
-                f1.Show();
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

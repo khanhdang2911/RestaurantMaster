@@ -129,10 +129,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txt_soluong.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAK4AAAAYCAYAAABjn8aGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB7SURBVHhe7dKxCQMxAARB9V+VhMpwGS7Aj0CJO/iFGbjk
-        4h2Qtff+zDl/Zm/fafVmO8Y5oOC0erMVLh3CJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyS
-        hEuScEkSLknCJUm4JP2Fu9b6nsPs7Tut3myhZowHcMrMcP3Bn4MAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAPAAAAAYCAYAAADEQnB9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACASURBVHhe7dOxCcQwAARB9V+VhMr4MlyAjUDJl7AwA5dc
+        vgOI23v/5pyvmTV2mr35jnEOoOM0e/MVMNQIGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFD
+        mIAhTMAQJmAIEzCECRjCBAxhfwGvtZ5zmFljp9mbL9A0xgc3eAWlks2e+gAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="lbl_SoLuong.BaseStylesheet" xml:space="preserve">
@@ -140,10 +140,10 @@
   </data>
   <data name="txt_tenmon.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAK4AAAAYCAYAAABjn8aGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB7SURBVHhe7dKxCQMxAARB9V+VhMpwGS7Aj0CJO/iFGbjk
-        4h2Qtff+zDl/Zm/fafVmO8Y5oOC0erMVLh3CJUm4JAmXJOGSJFyShEuScEkSLknCJUm4JAmXJOGSJFyS
-        hEuScEkSLknCJUm4JP2Fu9b6nsPs7Tut3myhZowHcMrMcP3Bn4MAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAPAAAAAYCAYAAADEQnB9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACASURBVHhe7dOxCcQwAARB9V+VhMr4MlyAjUDJl7AwA5dc
+        vgOI23v/5pyvmTV2mr35jnEOoOM0e/MVMNQIGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFD
+        mIAhTMAQJmAIEzCECRjCBAxhfwGvtZ5zmFljp9mbL9A0xgc3eAWlks2e+gAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="lbl_TenMon.BaseStylesheet" xml:space="preserve">

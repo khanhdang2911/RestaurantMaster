@@ -308,6 +308,7 @@
             this.cbb_role.Name = "cbb_role";
             this.cbb_role.Size = new System.Drawing.Size(125, 21);
             this.cbb_role.TabIndex = 24;
+            this.cbb_role.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbb_role_KeyPress);
             // 
             // btn_clear
             // 

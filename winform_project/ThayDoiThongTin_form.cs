@@ -73,5 +73,14 @@ namespace winform_project
                 }
             }
         }
+
+        private void button_doimatkhau_Click(object sender, EventArgs e)
+        {
+            User = _context.nguoiDungs.Find(User.Id);
+            DoiMatKhau_form doiMatKhau_Form = new DoiMatKhau_form(User);
+            doiMatKhau_Form.FormBorderStyle = FormBorderStyle.Sizable;
+            doiMatKhau_Form.Show();
+
+        }
     }
 }

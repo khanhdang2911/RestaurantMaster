@@ -349,6 +349,7 @@
             this.cbb_danhmuc.Name = "cbb_danhmuc";
             this.cbb_danhmuc.Size = new System.Drawing.Size(188, 27);
             this.cbb_danhmuc.TabIndex = 33;
+            this.cbb_danhmuc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbb_danhmuc_KeyPress);
             // 
             // btn_themMon
             // 

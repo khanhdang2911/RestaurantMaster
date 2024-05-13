@@ -207,7 +207,7 @@
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_password.OnIdleState = stateProperties4;
             this.txt_password.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_password.PasswordChar = '*';
+            this.txt_password.PasswordChar = '●';
             this.txt_password.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_password.PlaceholderText = "Password";
             this.txt_password.ReadOnly = false;
