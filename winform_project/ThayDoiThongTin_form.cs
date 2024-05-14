@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using winform_project.Services;
 
 namespace winform_project
 {
@@ -55,8 +56,14 @@ namespace winform_project
             else
             {
                 //Check xem so dien thoai da co hay chua
+                //Check sdt hop le hay khong
                 bool checkSdt = _context.nguoiDungs.Any(c => c.Id != User.Id && c.Phone == txt_phone.Text);
-                if(checkSdt==true)
+                if (Validation.isPhone(txt_phone.Text) == false)
+                {
+                    MessageBox.Show("Số điện thoại định dạng không hợp lệ, hãy nhập số khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+                else if(checkSdt==true)
                 {
                     MessageBox.Show("Số điện thoại đã tồn tại, hãy nhập số khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

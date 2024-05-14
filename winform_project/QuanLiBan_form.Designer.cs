@@ -65,7 +65,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtg_danhsachBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dtg_danhsachBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_danhsachBan.ColumnHeadersHeight = 40;
             this.dtg_danhsachBan.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dtg_danhsachBan.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dtg_danhsachBan.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -113,7 +113,7 @@
             this.btn_clear.BackColor = System.Drawing.Color.DodgerBlue;
             this.btn_clear.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clear.ForeColor = System.Drawing.Color.White;
-            this.btn_clear.Location = new System.Drawing.Point(299, 164);
+            this.btn_clear.Location = new System.Drawing.Point(313, 164);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(79, 34);
             this.btn_clear.TabIndex = 29;
@@ -125,7 +125,7 @@
             // 
             this.btn_suaBan.BackColor = System.Drawing.Color.SpringGreen;
             this.btn_suaBan.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_suaBan.Location = new System.Drawing.Point(418, 164);
+            this.btn_suaBan.Location = new System.Drawing.Point(435, 164);
             this.btn_suaBan.Name = "btn_suaBan";
             this.btn_suaBan.Size = new System.Drawing.Size(107, 34);
             this.btn_suaBan.TabIndex = 28;
@@ -223,7 +223,7 @@
             this.txt_tenBan.Size = new System.Drawing.Size(235, 40);
             this.txt_tenBan.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_tenBan.TabIndex = 31;
-            this.txt_tenBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_tenBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_tenBan.TextMarginBottom = 0;
             this.txt_tenBan.TextMarginLeft = 3;
             this.txt_tenBan.TextMarginTop = 0;

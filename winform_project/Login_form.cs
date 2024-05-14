@@ -36,6 +36,7 @@ namespace winform_project
                 //Hop he
                 this.Hide();
                 Form1 f1 = new Form1(user);
+                f1.FormBorderStyle = FormBorderStyle.FixedToolWindow;
                 f1.Show();
             }
 
@@ -43,6 +44,11 @@ namespace winform_project
             {
                 MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Login_form_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

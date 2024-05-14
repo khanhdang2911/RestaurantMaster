@@ -293,6 +293,7 @@
     <Compile Include="SanPham.cs" />
     <Compile Include="Ban.cs" />
     <Compile Include="SanPhamBan.cs" />
+    <Compile Include="Services\Validation.cs" />
     <Compile Include="ThayDoiThongTin_form.cs">
       <SubType>Form</SubType>
     </Compile>

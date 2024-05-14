@@ -77,9 +77,10 @@ namespace winform_project
             thayDoiThongTin_Form.FormBorderStyle= FormBorderStyle.Sizable;
             thayDoiThongTin_Form.Show();
         }
-
+        
         private void btn_dangxuat_Click_1(object sender, EventArgs e)
         {
+
             this.Close();
             Login_form loginform = new Login_form();
             loginform.Show();
@@ -100,7 +101,7 @@ namespace winform_project
             var IdroleNhanVien = _context.roles.Where(c => c.TenRole == "Nhanvien").FirstOrDefault();
             if (User.RoleId == IdroleNhanVien.Id)
             {
-                btn_quanliban.Hide();
+                btn_quanliHoaDon.Hide();
                 btn_quanliNhanVien.Hide();
 
             }

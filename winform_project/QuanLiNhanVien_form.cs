@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using winform_project.DTOs;
+using winform_project.Services;
 
 namespace winform_project
 {
@@ -132,8 +133,14 @@ namespace winform_project
                 string phone = txt_phone.Text.ToString();
                 string passwordHash = HashPasswordByBC.HashPassword(txt_password.Text.ToString());
                 string username = txt_userName.Text.ToString();
+                //Check sdt hop le hay khong
+                if (Validation.isPhone(txt_phone.Text) == false)
+                {
+                    MessageBox.Show(txt_phone.Text);
+                    MessageBox.Show("Số điện thoại định dạng không hợp lệ, hãy nhập số khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 //Kiem tra xem phone da ton tai hay chua
-                if (_context.nguoiDungs.Any(c=>c.Phone==phone))
+                else if (_context.nguoiDungs.Any(c=>c.Phone==phone))
                 {
                     MessageBox.Show("Số điện thoại này đã tồn tại.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
