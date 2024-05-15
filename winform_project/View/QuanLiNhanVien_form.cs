@@ -80,8 +80,19 @@ namespace winform_project
 
         private void list_nhanvien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            
+            var currenRow = list_nhanvien.CurrentRow;
+
+            if (currenRow != null)
+            {
+                int Id = int.Parse(currenRow.Cells[0].Value.ToString());
+                var nhanvien = _context.nguoiDungs.Where(c => c.Id == Id).FirstOrDefault();
+                txt_hoten.Text = nhanvien.HoTen;
+                txt_phone.Text = nhanvien.Phone;
+                txt_password.Text = "●●●●●●●●●●";
+                txt_userName.Text = nhanvien.Username;
+                cbb_role.SelectedItem = _context.roles.Find(nhanvien.RoleId);
+            }
+
         }
 
         private void QuanLiNhanVien_form_Load(object sender, EventArgs e)
@@ -134,9 +145,8 @@ namespace winform_project
                 string passwordHash = HashPasswordByBC.HashPassword(txt_password.Text.ToString());
                 string username = txt_userName.Text.ToString();
                 //Check sdt hop le hay khong
-                if (Validation.isPhone(txt_phone.Text) == false)
+                if (Validation.checkNumber(txt_phone.Text) == false)
                 {
-                    MessageBox.Show(txt_phone.Text);
                     MessageBox.Show("Số điện thoại định dạng không hợp lệ, hãy nhập số khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 //Kiem tra xem phone da ton tai hay chua

@@ -61,11 +61,18 @@ namespace winform_project
                 Ban ban = new Ban();
                 ban.TenBan = tenbanMoi;
                 ban.TinhTrang = false;
-                _context.bans.Add(ban);
-                _context.SaveChanges();
-                MessageBox.Show("Thêm bàn thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dtg_danhsachBan.DataSource = null;
-                LoadData();
+                if(_context.bans.Any(c=>c.TenBan==ban.TenBan))
+                {
+                    MessageBox.Show("Bàn này đã tồn tại.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    _context.bans.Add(ban);
+                    _context.SaveChanges();
+                    MessageBox.Show("Thêm bàn thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dtg_danhsachBan.DataSource = null;
+                    LoadData();
+                }
             }
         }
 

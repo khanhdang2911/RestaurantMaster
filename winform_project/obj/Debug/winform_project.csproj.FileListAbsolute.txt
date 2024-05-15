@@ -225,3 +225,12 @@ D:\winform_project\winform_project\bin\Debug\Microsoft.SqlServer.Server.xml
 D:\winform_project\winform_project\obj\Debug\winform_project.DoiMatKhau_form.resources
 D:\winform_project\winform_project\obj\Debug\winform_project.QuanLiBan_form.resources
 D:\winform_project\winform_project\obj\Debug\winform_project.QuanLiHoaDon_form.resources
+D:\winform_project\winform_project\bin\Debug\PdfSharp.Charting.dll
+D:\winform_project\winform_project\bin\Debug\PdfSharp.dll
+D:\winform_project\winform_project\bin\Debug\PdfSharp.xml
+D:\winform_project\winform_project\bin\Debug\PdfSharp.Charting.xml
+D:\winform_project\winform_project\bin\Debug\de\PdfSharp.resources.dll
+D:\winform_project\winform_project\bin\Debug\de\PdfSharp.Charting.resources.dll
+D:\winform_project\winform_project\bin\Debug\BouncyCastle.Crypto.dll
+D:\winform_project\winform_project\bin\Debug\itextsharp.dll
+D:\winform_project\winform_project\bin\Debug\itextsharp.xml

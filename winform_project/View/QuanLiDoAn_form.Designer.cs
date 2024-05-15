@@ -71,7 +71,7 @@
             this.lbl_address.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_address.Name = "lbl_address";
             this.lbl_address.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_address.Size = new System.Drawing.Size(72, 25);
+            this.lbl_address.Size = new System.Drawing.Size(83, 36);
             this.lbl_address.TabIndex = 28;
             this.lbl_address.Text = "Giá tiền";
             this.lbl_address.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -248,7 +248,7 @@
             this.txt_giatien.SelectionLength = 0;
             this.txt_giatien.SelectionStart = 0;
             this.txt_giatien.ShortcutsEnabled = true;
-            this.txt_giatien.Size = new System.Drawing.Size(196, 40);
+            this.txt_giatien.Size = new System.Drawing.Size(197, 36);
             this.txt_giatien.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txt_giatien.TabIndex = 26;
             this.txt_giatien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -355,7 +355,7 @@
             // 
             this.btn_themMon.BackColor = System.Drawing.Color.DodgerBlue;
             this.btn_themMon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_themMon.Location = new System.Drawing.Point(108, 136);
+            this.btn_themMon.Location = new System.Drawing.Point(37, 136);
             this.btn_themMon.Name = "btn_themMon";
             this.btn_themMon.Size = new System.Drawing.Size(83, 35);
             this.btn_themMon.TabIndex = 34;
@@ -368,7 +368,7 @@
             this.btn_xoamon.BackColor = System.Drawing.Color.LightCoral;
             this.btn_xoamon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_xoamon.ForeColor = System.Drawing.Color.Black;
-            this.btn_xoamon.Location = new System.Drawing.Point(335, 136);
+            this.btn_xoamon.Location = new System.Drawing.Point(173, 136);
             this.btn_xoamon.Name = "btn_xoamon";
             this.btn_xoamon.Size = new System.Drawing.Size(82, 35);
             this.btn_xoamon.TabIndex = 35;
@@ -380,7 +380,7 @@
             // 
             this.btn_suamon.BackColor = System.Drawing.Color.Turquoise;
             this.btn_suamon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_suamon.Location = new System.Drawing.Point(527, 136);
+            this.btn_suamon.Location = new System.Drawing.Point(327, 136);
             this.btn_suamon.Name = "btn_suamon";
             this.btn_suamon.Size = new System.Drawing.Size(84, 35);
             this.btn_suamon.TabIndex = 36;

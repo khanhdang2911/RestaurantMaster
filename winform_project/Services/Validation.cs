@@ -8,7 +8,7 @@ namespace winform_project.Services
 {
     public class Validation
     {
-        public static bool isPhone(string phone)
+        public static bool checkNumber(string phone)
         {
             foreach(var item in phone)
             {

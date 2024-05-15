@@ -513,7 +513,7 @@
             this.ClientSize = new System.Drawing.Size(908, 633);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_quanliban);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khanh\'s Coffee";

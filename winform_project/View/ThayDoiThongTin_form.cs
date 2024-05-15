@@ -14,6 +14,7 @@ namespace winform_project
     public partial class ThayDoiThongTin_form : Form
     {
         private readonly AppDbContext _context;
+        private DoiMatKhau_form doiMatKhau_Form;
         private NguoiDung User { set; get; }
         public ThayDoiThongTin_form(NguoiDung _User)
         {
@@ -58,7 +59,7 @@ namespace winform_project
                 //Check xem so dien thoai da co hay chua
                 //Check sdt hop le hay khong
                 bool checkSdt = _context.nguoiDungs.Any(c => c.Id != User.Id && c.Phone == txt_phone.Text);
-                if (Validation.isPhone(txt_phone.Text) == false)
+                if (Validation.checkNumber(txt_phone.Text) == false)
                 {
                     MessageBox.Show("Số điện thoại định dạng không hợp lệ, hãy nhập số khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -83,11 +84,20 @@ namespace winform_project
 
         private void button_doimatkhau_Click(object sender, EventArgs e)
         {
-            User = _context.nguoiDungs.Find(User.Id);
-            DoiMatKhau_form doiMatKhau_Form = new DoiMatKhau_form(User);
-            doiMatKhau_Form.FormBorderStyle = FormBorderStyle.Sizable;
-            doiMatKhau_Form.Show();
+            
+            if(doiMatKhau_Form==null)
+            {
+                User = _context.nguoiDungs.Find(User.Id);
+                doiMatKhau_Form = new DoiMatKhau_form(User);
+                doiMatKhau_Form.FormBorderStyle = FormBorderStyle.Sizable;
+                doiMatKhau_Form.FormClosed += ThayDoiThongTin_Form_FormClosed;
+                doiMatKhau_Form.Show();
+            }
 
+        }
+        private void ThayDoiThongTin_Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            doiMatKhau_Form = null; 
         }
     }
 }

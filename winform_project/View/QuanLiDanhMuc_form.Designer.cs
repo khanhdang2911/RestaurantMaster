@@ -271,6 +271,7 @@
             this.Controls.Add(this.txt_tenDanhMuc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QuanLiDanhMuc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí danh mục";
             this.Load += new System.EventHandler(this.QuanLiDanhMuc_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.list_danhmuc)).EndInit();

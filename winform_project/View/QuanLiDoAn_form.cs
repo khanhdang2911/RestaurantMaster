@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using winform_project.DTOs;
+using winform_project.Services;
 
 namespace winform_project
 {
@@ -121,22 +122,39 @@ namespace winform_project
             {
                 check = false;
             }
-
+          
             if (check==true)
             {
                 int DanhMucId = Convert.ToInt32(DanhMucDuocChon);
 
 
-                SanPham sanphamMoi = new SanPham();
-                sanphamMoi.TenSanPham = tensp;
-                sanphamMoi.GiaSanPham = decimal.Parse(giasp);
-                sanphamMoi.DanhMucId = DanhMucId;
-                sanphamMoi.TinhTrang = tinhtrang;
-                _context.sanPhams.Add(sanphamMoi);
-                _context.SaveChanges();
-                bunifuDataGridView1.DataSource = null;
-                LoadDataAsync();
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                try
+                {
+                    SanPham sanphamMoi = new SanPham();
+                    sanphamMoi.TenSanPham = tensp;
+                    sanphamMoi.GiaSanPham = decimal.Parse(giasp);
+                    sanphamMoi.DanhMucId = DanhMucId;
+                    sanphamMoi.TinhTrang = tinhtrang;
+                    //Check xem co them trung san pham giong nhau hay khong
+                    if (_context.sanPhams.Any(c => c.TenSanPham == sanphamMoi.TenSanPham && c.GiaSanPham == sanphamMoi.GiaSanPham))
+                    {
+                        MessageBox.Show("Sản phẩm này đã tồn tại.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        _context.sanPhams.Add(sanphamMoi);
+                        _context.SaveChanges();
+                        bunifuDataGridView1.DataSource = null;
+                        LoadDataAsync();
+                        MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch 
+                {
+                    MessageBox.Show("Không phù hợp định dạng giá tiền.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
             else
             {
@@ -206,16 +224,23 @@ namespace winform_project
                 if(sanpham.TenSanPham!=tensp || sanpham.GiaSanPham.ToString()!=giasp || sanpham.DanhMucId.ToString()!=DanhMucDuocChon.ToString() || sanpham.TinhTrang!=tinhtrang)
                 {
                     _context.SaveChanges();
-                    sanpham.TenSanPham = tensp;
-                    sanpham.GiaSanPham = decimal.Parse(giasp);
-                    sanpham.DanhMucId = int.Parse(DanhMucDuocChon.ToString());
-                    sanpham.TinhTrang = tinhtrang;
+                    try
+                    {
+                        sanpham.TenSanPham = tensp;
+                        sanpham.GiaSanPham = decimal.Parse(giasp);
+                        sanpham.DanhMucId = int.Parse(DanhMucDuocChon.ToString());
+                        sanpham.TinhTrang = tinhtrang;
 
 
-                    _context.SaveChanges();
-                    bunifuDataGridView1.DataSource = null;
-                    LoadDataAsync();
-                    MessageBox.Show("Sửa đổi thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        _context.SaveChanges();
+                        bunifuDataGridView1.DataSource = null;
+                        LoadDataAsync();
+                        MessageBox.Show("Sửa đổi thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Không phù hợp định dạng giá tiền.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 
               

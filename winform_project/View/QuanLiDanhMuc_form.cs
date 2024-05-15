@@ -122,12 +122,19 @@ namespace winform_project
             {
                 DanhMuc danhMuc = new DanhMuc();
                 danhMuc.TenDanhMuc = txt_tenDanhMuc.Text;
-                _context.danhMucs.Add(danhMuc);
-                _context.SaveChanges();
-                
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                list_danhmuc.DataSource = null;
-                LoadDataAsync();
+                if(_context.danhMucs.Any(c=>c.TenDanhMuc==danhMuc.TenDanhMuc))
+                {
+                    MessageBox.Show("Danh mục này đã tồn tại", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    _context.danhMucs.Add(danhMuc);
+                    _context.SaveChanges();
+
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    list_danhmuc.DataSource = null;
+                    LoadDataAsync();
+                } 
             }
         }
 
@@ -146,7 +153,7 @@ namespace winform_project
                 danhMuc.TenDanhMuc = txt_tenDanhMuc.Text;
                 _context.SaveChanges();
 
-                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 list_danhmuc.DataSource = null;
                 LoadDataAsync();
             }
